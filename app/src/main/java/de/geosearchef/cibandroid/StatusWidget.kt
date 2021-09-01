@@ -41,6 +41,7 @@ class StatusWidget : AppWidgetProvider() {
             Thread {
                 if(System.currentTimeMillis() - lastUpdate < minUpdateInterval) {
                     println("aborting update")
+                    return@Thread
                 }
 
                 lastUpdate = System.currentTimeMillis()
